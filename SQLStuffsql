@@ -1,0 +1,6 @@
+CREATE TABLE Silverware{
+needed varchar(255),
+reserves varchar(255),
+unpaid varchar(255),
+paid varchar(255)
+}
