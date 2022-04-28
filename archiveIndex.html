@@ -1,0 +1,61 @@
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <div class="title">
+      <h1>
+        <center>In Progress Silverware</center>
+      </h1>
+    </div>
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Question</th>
+          <th scope="col">Number</th>
+          <th scope="col">Add</th>
+          <th scope="col">Subtact</th>
+          <th scope="col">status?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Needed to Complete:</th>
+          <td id="needed">0</td>
+          <td><input id="inputNeeded" type="number" value = 0></td>
+          <td><button onclick="addToTotal('needed', 'inputNeeded')">ADD</button></td>
+          <td><button onclick="subtractToTotal('needed')">Subtract</button></td>
+          <td><button onclick="moveToNext('needed', 'reserves')">Complete</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Total in Reserves:</th>
+          <td id="reserves">0</td>
+          <td><input type="text" value = 0></td>
+          <td><button onclick="addToTotal('reserves')">ADD</button></td>
+          <td><button onclick="subtractToTotal('reserves')">Subtract</button></td>
+          <td><button onclick="Submit">Submit</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Total Unpaid:</th>
+          <td id="unpaid">0</td>
+          <td><button onclick="addToTotal('unpaid')">ADD</button></td>
+          <td><button onclick="subtractToTotal('unpaid')">Subtract</button></td>
+        </tr>
+        <tr>
+          <th scope="row">Total Paid:</th>
+          <td id="paid">0</td>
+          <td><button onclick="addToTotal('paid')">ADD</button></td>
+          <td><button onclick="subtractToTotal('paid')">Subtract</button></td>
+        </tr>
+        <?php
+        if(isset($_POST['submit'])){
+        ?>
+      </tbody>
+    </table>
+  </body>
+
+</html>
