@@ -1,6 +1,10 @@
-function addToTotal(adjustedRow) {
+function addToTotal(adjustedRow, numAdjustment) {
   var elem = document.getElementById(adjustedRow);
-  elem.innerHTML++;
+  var numInput = document.getElementById(numAdjustment);
+  if(numInput.value != 0){
+    elem.innerHTML = parseInt(elem.innerHTML) + parseInt(numInput.value);
+    numInput.value = 0;
+  }else elem.innerHTML++;
 }
 
 function subtractToTotal(adjustedRow) {

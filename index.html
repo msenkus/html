@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <script src="script.js"></script>
-
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
@@ -13,49 +13,46 @@
         <center>In Progress Silverware</center>
       </h1>
     </div>
+    <div>
+      <table class="table table-dark">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Needed to Complete:</th>
+            <td id="needed">0</td>
+            <td><input id="neededNumInput" type="number" value = 0 step="5"></td>
+            <td><button onclick="addToTotal('needed', 'neededNumInput')">ADD</button></td>
+            <td><button onclick="subtractToTotal('needed')">Subtract</button></td>
+            <td><button onclick="moveToNext('needed', 'reserves')">Complete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">Total in Reserves:</th>
+            <td id="reserves">0</td>
+            <td><input id="resNumInput" type="number" value = 0 step = "5"></td>
+            <td><button onclick="addToTotal('reserves', 'resNumInput')">ADD</button></td>
+            <td><button onclick="subtractToTotal('reserves')">Subtract</button></td>
+            <td><button onclick="moveToNext('reserves', 'unpaid')">Complete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">Total Unpaid:</th>
+            <td id="unpaid">0</td>
+            <td><input id="unpaidNumInput" type="number" value=0 step="5"></td>
+            <td><button onclick="addToTotal('unpaid', 'unpaidNumInput')">ADD</button></td>
+            <td><button onclick="subtractToTotal('unpaid')">Subtract</button></td>
+            <td><button onclick="moveToNext('unpaid', 'paid')">Complete</button></td>
+          </tr>
+          <tr>
+            <th scope="row">Total Paid:</th>
+            <td id="paid">0</td>
+            <td><input id="paidNumInput" type="number" value=0 step="5"></td>
+            <td><button onclick="addToTotal('paid','paidNumInput')">ADD</button></td>
+            <td><button onclick="subtractToTotal('paid')">Subtract</button></td>
+          </tr>
+      </table>
+    </div>
+    <div>
 
-    <table class="table table-dark">
-      <thead>
-        <tr>
-          <th scope="col">Question</th>
-          <th scope="col">Number</th>
-          <th scope="col">Add</th>
-          <th scope="col">Subtact</th>
-          <th scope="col">status?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">Needed to Complete:</th>
-          <td id="needed">0</td>
-          <td><input id="inputNeeded" type="number" value = 0></td>
-          <td><button onclick="addToTotal('needed', 'inputNeeded')">ADD</button></td>
-          <td><button onclick="subtractToTotal('needed')">Subtract</button></td>
-          <td><button onclick="moveToNext('needed', 'reserves')">Complete</button></td>
-        </tr>
-        <tr>
-          <th scope="row">Total in Reserves:</th>
-          <td id="reserves">0</td>
-          <td><input type="text" value = 0></td>
-          <td><button onclick="addToTotal('reserves')">ADD</button></td>
-          <td><button onclick="subtractToTotal('reserves')">Subtract</button></td>
-          <td><button onclick="Submit">Submit</button></td>
-        </tr>
-        <tr>
-          <th scope="row">Total Unpaid:</th>
-          <td id="unpaid">0</td>
-          <td><button onclick="addToTotal('unpaid')">ADD</button></td>
-          <td><button onclick="subtractToTotal('unpaid')">Subtract</button></td>
-        </tr>
-        <tr>
-          <th scope="row">Total Paid:</th>
-          <td id="paid">0</td>
-          <td><button onclick="addToTotal('paid')">ADD</button></td>
-          <td><button onclick="subtractToTotal('paid')">Subtract</button></td>
-        </tr>
-    </table>
+    </div>
   </body>
-<?php
-	echo "I Love Steph!!!";
-?>
 </html>
